@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from requests_oauthlib import OAuth1
 import requests
 import os
+os.environ["FLASK_RUN_PORT"] = "8080"
 
 app = Flask(__name__)
 
