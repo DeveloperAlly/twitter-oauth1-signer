@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify
 from requests_oauthlib import OAuth1
 import requests
 import os
-app.run(host="0.0.0.0", port=8080)
 
 # Load credentials from environment variables
 CONSUMER_KEY = os.environ.get("TWITTER_CONSUMER_KEY")
@@ -51,6 +50,4 @@ def tweet():
     return jsonify(response.json()), response.status_code
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8080))
-    print(f"✅ Flask starting on port {port}...")
-    app.run(host="0.0.0.0", port=port)
+    app.run(host="0.0.0.0", port=8080)
