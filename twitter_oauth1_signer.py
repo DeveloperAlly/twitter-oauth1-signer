@@ -2,9 +2,7 @@ from flask import Flask, request, jsonify
 from requests_oauthlib import OAuth1
 import requests
 import os
-os.environ["FLASK_RUN_PORT"] = "8080"
-
-app = Flask(__name__)
+app.run(host="0.0.0.0", port=8080)
 
 # Load credentials from environment variables
 CONSUMER_KEY = os.environ.get("TWITTER_CONSUMER_KEY")
