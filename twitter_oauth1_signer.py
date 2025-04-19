@@ -3,6 +3,9 @@ from requests_oauthlib import OAuth1
 import requests
 import os
 
+# ✅ Initialize the Flask app
+app = Flask(__name__)
+
 # Load credentials from environment variables
 CONSUMER_KEY = os.environ.get("TWITTER_CONSUMER_KEY")
 CONSUMER_SECRET = os.environ.get("TWITTER_CONSUMER_SECRET")
